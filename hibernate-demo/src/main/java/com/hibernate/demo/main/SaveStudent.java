@@ -16,7 +16,7 @@ public class SaveStudent {
 
         Transaction tx = session.beginTransaction();
 
-        Student student = new Student("Ramesh", 23);
+        Student student = new Student("NameOfStudent", 20);
         session.save(student);
 
         tx.commit();

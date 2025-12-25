@@ -1,0 +1,17 @@
+Folder Structuers
+
+hibernate-demo
+│
+├── pom.xml
+├── src
+│   └── main
+│       ├── java
+│       │   └── com.hibernate.demo
+│       │       ├── entity
+│       │       │   └── Student.java
+│       │       ├── util
+│       │       │   └── HibernateUtil.java
+│       │       └── main
+│       │           └── SaveStudent.java
+│       └── resources
+│           └── hibernate.cfg.xml
