@@ -1,0 +1,2 @@
+for crating mvn file:
+mvn archetype:generate -DgroupId=com.hibernate.crud -DartifactId=hibernate-crud -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false

@@ -9,19 +9,22 @@ import com.hibernate.demo.util.HibernateUtil;
 public class SaveStudent {
 
     public static void main(String[] args) {
+        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+            Transaction tx = session.beginTransaction();
 
-        Session session = HibernateUtil
-                .getSessionFactory()
-                .openSession();
+            // add as many students as you like here
+            Student s1 = new Student("Alice", 20, "alice@example.com");
+            Student s2 = new Student("Bob", 21, "bob@example.com");
+            Student s3 = new Student("Charlie", 22, "charlie@example.com");
 
-        Transaction tx = session.beginTransaction();
+            session.save(s1);
+            session.save(s2);
+            session.save(s3);
 
-        Student student = new Student("NameOfStudent", 20, "StudentEmail@example.com");
-        session.save(student);
-
-        tx.commit();
-        session.close();
-
-        System.out.println("Student saved successfully!");
+            tx.commit();
+            System.out.println("Students saved successfully!");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

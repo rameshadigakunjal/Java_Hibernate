@@ -1,0 +1,4 @@
+com\hibernate\demo\util\HibernateUtil.class
+com\hibernate\demo\App.class
+com\hibernate\demo\main\SaveStudent.class
+com\hibernate\demo\entity\Student.class
